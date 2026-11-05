@@ -5,7 +5,7 @@
 
 void game() {
   int difficulty;
-  int num = rand() % 101;
+  int num = rand() % 101 + 1;
 
   printf("Please select a difficulty level:\n"
          "0. Infinite\n"
