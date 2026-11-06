@@ -5,7 +5,7 @@
 
 void game() {
   int difficulty;
-  int num = rand() % 101 + 1;
+  int num = rand() % 101;
 
   printf("Please select a difficulty level:\n"
          "0. Infinite\n"
@@ -35,13 +35,15 @@ void game() {
     scanf("%d", &input);
     if (input == num) {
       printf("You win! In %d tries\n\n", i);
-      break;
+      return;
     } else if (input > num) {
       printf("Too big! %d tries remaining\n\n", difficulty - i);
     } else {
       printf("Too small! %d tries remaining\n\n", difficulty - i);
     }
   }
+
+  printf("You lose! The number was %d\n\n", num);
 }
 
 int main(void) {
